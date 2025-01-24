@@ -88,7 +88,6 @@ function App(): React.JSX.Element {
           </Card>
           <Card
             mode="elevated"
-            theme={{dark: true}}
             style={{
               padding: 16,
               width: '100%',
@@ -104,7 +103,7 @@ function App(): React.JSX.Element {
               LOGIN
             </Button>
           </Card>
-          <Card mode="outlined" style={{width: '100%'}} theme={{dark: true}}>
+          <Card mode="outlined" style={{width: '100%'}}>
             <Card.Title
               title="Card Title"
               subtitle="Card Subtitle"

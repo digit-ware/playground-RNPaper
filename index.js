@@ -3,15 +3,20 @@
  */
 
 import * as React from 'react';
-import {AppRegistry} from 'react-native';
+import {AppRegistry, Platform} from 'react-native';
 import {name as appName} from './app.json';
 import App from './App';
 import {
   Appbar,
   PaperProvider,
-  MD3LightTheme as LightTheme,
+  configureFonts,
   MD3DarkTheme as DarkTheme,
+  MD3LightTheme as LightTheme,
 } from 'react-native-paper';
+
+const fontConfig = {
+  fontFamily: 'Exo2-Medium',
+};
 
 const customLightTheme = {
   ...LightTheme,
@@ -21,6 +26,7 @@ const customLightTheme = {
     primary: 'blue',
     secondary: 'yellow',
   },
+  fonts: configureFonts({config: fontConfig}),
 };
 
 const customDarkTheme = {
@@ -29,6 +35,7 @@ const customDarkTheme = {
   colors: {
     ...DarkTheme.colors,
   },
+  fonts: configureFonts({config: fontConfig}),
 };
 
 export default function Main() {
